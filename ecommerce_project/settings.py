@@ -74,6 +74,13 @@ TIME_ZONE = 'Asia/Kolkata'
 USE_I18N = True
 USE_TZ = True
 
+ALLOWED_HOSTS = [
+    '127.0.0.1',                  # for local testing
+    'localhost',                   # for local testing
+    'e-commerce-project-v0dy.onrender.com',  # your Render URL
+]
+
+
 # Static & Media
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]

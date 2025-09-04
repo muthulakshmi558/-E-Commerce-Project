@@ -80,7 +80,18 @@ ALLOWED_HOSTS = [
     'e-commerce-project-v0dy.onrender.com',  # your Render URL
 ]
 
+import os
 
+# Static files (CSS, JS, images)
+STATIC_URL = '/static/'
+
+# Directory where `collectstatic` will gather static files
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# Optional: Additional directories for local static files
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 # Static & Media
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]

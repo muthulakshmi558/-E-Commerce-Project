@@ -84,6 +84,7 @@ import os
 
 # Static files (CSS, JS, images)
 STATIC_URL = '/static/'
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Directory where `collectstatic` will gather static files
 STATIC_ROOT = BASE_DIR / 'staticfiles'

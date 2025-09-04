@@ -1,0 +1,24 @@
+{% extends "ecommerce/Layout/base.html" %}
+{% block title %}Login - E-Shop{% endblock %}
+
+{% block content %}
+<div class="flex justify-center items-center min-h-[70vh]">
+    <div class="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
+        <h2 class="text-3xl font-bold text-indigo-600 mb-6 text-center">Login</h2>
+        <form method="post" class="space-y-4">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            <div>
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+            <div>
+                {{ form.password.label_tag }}
+                {{ form.password }}
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 transition">Login</button>
+        </form>
+        <p class="mt-4 text-center text-gray-600">Don't have an account? <a href="{% url 'register' %}" class="text-indigo-600 hover:underline">Register</a></p>
+    </div>
+</div>
+{% endblock %}
